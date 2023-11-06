@@ -84,11 +84,8 @@ class Request(models.Model):
     body = models.TextField()
     type = models.ForeignKey(RequestType, related_name="requests", on_delete=models.CASCADE)
     date = models.DateTimeField(auto_now_add=True)
-    
+   
 #for company
 class Company(models.Model):
     model = models.FileField(upload_to="company/model/%y%m%d")
     logo = models.FileField(upload_to="company/logo/%y%m%d")
-
-
-
