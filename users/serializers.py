@@ -30,7 +30,7 @@ class UserSerializer(serializers.ModelSerializer):
     def get_owner_animations(self, obj):
         data = []
         if obj.owner_animations:
-            serializer = AnimationSerializer(obj.owner_animations, many=True, contex=self.context)
+            serializer = AnimationSerializer(obj.owner_animations, many=True, context=self.context)
             data = serializer.data
         return data 
 
