@@ -11,5 +11,4 @@ router.register("animations", views.AnimationViewSet,         basename="animatio
 
 urlpatterns = [
     path('products/', include(router.urls)),
-    path('products/', include(router.urls)),
 ]
