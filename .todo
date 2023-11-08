@@ -1,0 +1,133 @@
+{
+  "todotree": {
+    "tree": [
+      {
+        "key": 1699462842499,
+        "children": [
+          {
+            "key": 1699462854227,
+            "children": [],
+            "todo": {
+              "content": "SIGN UP",
+              "id": 1699462854227,
+              "level": "default",
+              "done": true,
+              "start": 1699462854227,
+              "focus": false,
+              "end": 1699462979825
+            }
+          },
+          {
+            "key": 1699462860801,
+            "children": [],
+            "todo": {
+              "content": "SIGN IN",
+              "id": 1699462860801,
+              "level": "default",
+              "done": false,
+              "start": 1699462860801
+            }
+          },
+          {
+            "key": 1699462871075,
+            "children": [],
+            "todo": {
+              "content": "EMAIL CHECK",
+              "id": 1699462871075,
+              "level": "default",
+              "done": false,
+              "start": 1699462871075
+            }
+          }
+        ],
+        "todo": {
+          "content": "AUTH",
+          "id": 1699462842499,
+          "level": "default",
+          "done": false,
+          "start": 1699462842499
+        }
+      },
+      {
+        "key": 1699462881831,
+        "children": [],
+        "todo": {
+          "content": "PAYMENT",
+          "id": 1699462881831,
+          "level": "default",
+          "done": false,
+          "start": 1699462881831
+        }
+      },
+      {
+        "key": 1699462900105,
+        "children": [],
+        "todo": {
+          "content": "SECURITY ANIMATION",
+          "id": 1699462900105,
+          "level": "default",
+          "done": false,
+          "start": 1699462900105
+        }
+      },
+      {
+        "key": 1699462913840,
+        "children": [],
+        "todo": {
+          "content": "SEARCH ENGINE",
+          "id": 1699462913840,
+          "level": "default",
+          "done": false,
+          "start": 1699462913840
+        }
+      },
+      {
+        "key": 1699462931587,
+        "children": [],
+        "todo": {
+          "content": "PUBLIC AND PRIVATE MEDIA",
+          "id": 1699462931587,
+          "level": "default",
+          "done": false,
+          "start": 1699462931587
+        }
+      },
+      {
+        "key": 1699462947438,
+        "children": [],
+        "todo": {
+          "content": "POSTMAN",
+          "id": 1699462947438,
+          "level": "default",
+          "done": false,
+          "start": 1699462947438
+        }
+      },
+      {
+        "key": 1699462963620,
+        "children": [],
+        "todo": {
+          "content": "PROJECT MANAGEMENT",
+          "id": 1699462963620,
+          "level": "default",
+          "done": false,
+          "start": 1699462963620
+        }
+      }
+    ],
+    "expandKeys": [
+      1699462842499
+    ],
+    "schema": "https://github.com/Saber2pr/vsc-ext-todolist/blob/master/src/api/type.ts#L3",
+    "add_mode": "bottom",
+    "virtual": false,
+    "showLine": false,
+    "playFontSize": 24,
+    "title": ".todo",
+    "autoSort": false,
+    "showEndTime": false,
+    "simpleMode": false,
+    "lang": "en",
+    "version": "1699462980135"
+  }
+}

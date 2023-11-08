@@ -1,9 +1,17 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+from imagekit.models import ImageSpecField
+from imagekit.processors import Transpose
 
 class UserProfile(AbstractUser):
     USER_TYPE = ()
     image = models.FileField(upload_to="users/%y/%m/%d/", blank=True, null=True)
+    thumbnail_image = ImageSpecField(
+        source = 'image',
+        processors = [Transpose(),],
+        format = 'JPEG',
+        options = {'quality':60}
+    )
     middle_name = models.CharField(max_length=255, blank=True, null=True)
 
     @property

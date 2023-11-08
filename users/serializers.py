@@ -4,15 +4,17 @@ from django.contrib.auth import get_user_model
 from products.serializers import AnimationSerializer
 
 class UserSerializer(serializers.ModelSerializer):
-    password = serializers.Field(write_only=True)
+    password = serializers.CharField(write_only=True, style={"input_type": "password"})
     owner_animations = serializers.SerializerMethodField("get_owner_animations")
     user_animations = serializers.SerializerMethodField("get_user_animations")
+    thumbnail_image = serializers.ImageField(read_only=True)
 
     class Meta:
         model = get_user_model()
         fields = [
             "id",
             "image",
+            'thumbnail_image',
             "username",
             "email",
             "password",
@@ -23,11 +25,12 @@ class UserSerializer(serializers.ModelSerializer):
             "owner_animations",
             "user_animations",
         ]
+        extra_kwargs = {'password': {'write_only': True}}
 
     def get_owner_animations(self, obj):
         data = []
         if obj.owner_animations:
-            serializer = AnimationSerializer(obj.owner_animations, many=True)
+            serializer = AnimationSerializer(obj.owner_animations, many=True, contex=self.context)
             data = serializer.data
         return data 
 
@@ -41,3 +44,17 @@ class UserSerializer(serializers.ModelSerializer):
             data = serializer.data 
         return data 
 
+#learn
+    def update(self, instance, validated_data):
+        password = validated_data.pop('password')
+        instance.set_password(password)
+        instance.save()
+        return super().update(instance, validated_data)
+    
+#learn
+    def create(self, validated_data):
+        password = validated_data.pop('password')
+        user = get_user_model().objects.create_user(**validated_data)
+        user.set_password(password)
+        user.save()
+        return super().create(validated_data)
