@@ -33,4 +33,5 @@ class MyUserAdmin(UserAdmin):
         (_("Important dates"), {"fields": ("last_login", "date_joined")}),
     )
 
-admin.site.register(models.UserProfile, MyUserAdmin)
+# admin.site.register(models.UserProfile, MyUserAdmin)
+admin.site.register(models.UserProfile)
