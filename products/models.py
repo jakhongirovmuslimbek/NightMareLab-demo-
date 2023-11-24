@@ -15,7 +15,7 @@ class Tag(models.Model):
     subcategory = models.ForeignKey(SubCategory, related_name="tags", on_delete=models.CASCADE,blank=True,null=True )
     title = models.CharField(max_length=255)
     slug = models.SlugField()
-
+    
 class BodyCategory(models.Model):
     title = models.CharField(max_length=255)
     slug = models.SlugField()
